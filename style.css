@@ -4,7 +4,7 @@
   color: black;
   background-color: #e6e6e6;
   border-radius: 8px;
-  padding: 12px;
+  padding: 8px;
   margin-bottom: 10px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -17,11 +17,11 @@
 }
 .service-number {
   color: black;
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 4px;
 }
 .timestamp {
-  font-size: 0.85rem;
+  font-size: 11px;
   color: black;
   margin-top: 2px;
   font-weight: 500;

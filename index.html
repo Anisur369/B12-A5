@@ -13,7 +13,11 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     :root {
-      --custom-width: 1290px;
+      --custom-width: 1280px;
+      --sm-width: 640px;
+      --md-width: 768px;
+      --lg-width: 1024px;
+      --xl-width: 1280px;
       --custom-bg: #ffffff;
       --custom-margin-left: auto;
       --custom-margin-right: auto;
@@ -31,19 +35,19 @@
 </head>
 <body>
   <header class="bg-[var(--custom-bg)]">
-      <nav class="w-[var(--custom-width)] ml-[var(--custom-margin-left)] mr-[var(--custom-margin-right)] flex justify-between items-center py-5"> <!-- navbar -->
+      <nav class="sm:w-[var(--sm-width)] md:w-[var(--md-width)] lg:w-[var(--lg-width)] xl:w-[var(--xl-width)] ml-[var(--custom-margin-left)] mr-[var(--custom-margin-right)] flex justify-between items-center py-5 px-2 sm:px-4"> <!-- navbar -->
         <div class="flex items-center"> <!-- navbar-left -->
           <div class="w-[40px] h-[40px] bg-[linear-gradient(45deg, red, yellow)] flex justify-[center] items-[center]"> <!-- icon-circle -->
             <span class="text-[11px]"> <!-- icon-symbol -->
               <img src="./assets/logo.png" alt="Logo" />
             </span>
           </div>
-          <div class="ml-[10px] font-700 text-[#006747] flex flex-col text-[18px] font-bold">
+          <div class="hidden md:block ml-[10px] font-700 text-[#006747] flex flex-col text-[18px] font-bold">
             <span> Emergency </span>
             <span> Service </span>
           </div> <!-- service-text -->
         </div>
-        <div class="flex items-center gap-10"> <!-- navbar-right -->
+        <div class="flex items-center gap-2 sm:gap-5 md:gap-10"> <!-- navbar-right -->
           <div class="cursor-pointer badge rounded-[50px] bg-[#ecfff0] text-[20px] p-5 font-semibold">
             <span id="loveCounter">0</span>
             <img class="w-[25px] h-[25px]" src="./assets/heart.png" alt="heart">
@@ -62,7 +66,7 @@
 
   <main>
     <section class="bg_color">
-      <div class="flex flex-col items-center justify-center w-[var(--custom-width)] ml-[var(--custom-margin-left)] mr-[var(--custom-margin-right)] py-10 text-center text-white"> <!-- banner-section -->
+      <div class="flex flex-col items-center justify-center sm:w-[var(--sm-width)] md:w-[var(--md-width)] lg:w-[var(--lg-width)] xl:w-[var(--xl-width)] ml-[var(--custom-margin-left)] mr-[var(--custom-margin-right)] py-10 text-center text-white"> <!-- banner-section -->
         <div class="mb-2"> <!-- emblem-container -->
           <img src="./assets/logo-dark.png" alt="Bangladesh Emblem" class="w-[120px] h-auto" />
         </div>
@@ -72,9 +76,10 @@
         </div>
       </div>
     </section>
-    <section class="w-[var(--custom-width)] ml-[var(--custom-margin-left)] mr-[var(--custom-margin-right)] py-20">
-      <div class="flex gap-5 w-full"> <!-- main-content -->
-        <div class="grid grid-cols-3 gap-4 w-[75%]">
+
+    <section class="sm:w-[var(--sm-width)] md:w-[var(--md-width)] lg:w-[var(--lg-width)] xl:w-[var(--xl-width)] ml-[var(--custom-margin-left)] mr-[var(--custom-margin-right)] py-20">
+      <div class="flex gap-5 flex-col lg:flex-row xl:flex-row w-full items-center md:items-start px-4"> <!-- main-content -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4  w-[100%]">
           <!-- Example Card -->
           <div class="bg-white flex flex-col rounded-lg px-4 py-4 shadow-md">
             <div class="flex justify-between items-center text-lg font-semibold">
@@ -92,8 +97,8 @@
               All
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
           <!-- Example: Fire Service -->
@@ -113,8 +118,8 @@
               Police
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -134,8 +139,8 @@
               Fire
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -155,8 +160,8 @@
               Health
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -176,8 +181,8 @@
               help
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -197,8 +202,8 @@
               Govt.
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -218,8 +223,8 @@
               Electricity
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -239,8 +244,8 @@
               NGO
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -260,8 +265,8 @@
               Travel
             </div>
             <div class="mt-5 flex gap-2">
-              <button id="copyButton" class="btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
-              <button id="callButton" class="btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
+              <button id="copyButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#ffffff] text-[16px] font-semibold outline-none border-[#e4e6e5] text-[#e4e6e5]"><i class="fa-solid fa-copy"></i> copy</button>
+              <button id="callButton" class="rounded-lg btn btn-secondary w-[50%] bg-[#00a63e] text-[16px] outline-none border-none"><i class="fa-solid fa-phone font-semibold"></i>Call</button>
             </div>
           </div>
 
@@ -269,22 +274,15 @@
         </div>
 
         <!-- Call History Panel -->
-        <div class="bg-[white] w-[25%] rounded-lg p-4 shadow-md max-w-md">
+        <div class="bg-[white] w-[100%] sm:w-[100%] md:w-[100%] lg:w-[50%] xl:w-[30%] h-[50vh] lg:h-[165vh] xl:h-[100vh] 2xl:h-[90vh] rounded-lg p-3 shadow-md">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-lg font-semibold"><i class="fa-regular fa-clock"></i> Call History</h3>
-            <!-- <button id="clearHistory" class="text-red-400 hover:text-red-600 text-sm">🗑️ Clear</button> -->
             <div id="clearHistory" class="cursor-pointer badge rounded-[50px] bg-[#00a63e] text-[20px] p-5 font-medium">clear</div>
           </div>
           <ul id="callHistory" class="space-y-2 text-sm text-gray-300">
 
 
-            <li class="call-entry">
-              <div>
-                <div class="service-name">Fire Service Number</div>
-                <div class="service-number">999</div>
-              </div>
-              <div class="timestamp">11:36:58 AM</div>
-            </li>
+
 
           </ul>
         </div>
