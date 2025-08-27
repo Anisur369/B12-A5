@@ -1,0 +1,27 @@
+.call-entry {
+  display: flex;
+  gap: 40px;
+  color: black;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  align-items: center;
+}
+.service-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+.service-number {
+  color: black;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+.timestamp {
+  font-size: 0.85rem;
+  color: black;
+  margin-top: 2px;
+  font-weight: 500;
+}
