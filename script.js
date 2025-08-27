@@ -45,7 +45,7 @@ for (let i = 0; i < copyButtons.length; i++) {
     const phoneNumber = serviceNumber[i].innerText;
     navigator.clipboard.writeText(phoneNumber).then(() => {
       copyCounter.innerText = parseInt(copyCounter.innerText) + 1;
-      window.alert(`Copied ${phoneNumber} to clipboard`);
+      window.alert(`Number copied. ${phoneNumber}`);
     });
   });
 }
